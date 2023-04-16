@@ -47,8 +47,8 @@ class AutonomousAgent {
       console.log(e);
       this.sendErrorMessage(
         this.modelSettings.customApiKey !== ""
-          ? `ERROR retrieving initial tasks array. Make sure your API key is not the free tier, make your goal more clear, or revise your goal such that it is within our model's policies to run. Shutting Down.`
-          : `ERROR retrieving initial tasks array. Retry, make your goal more clear, or revise your goal such that it is within our model's policies to run. Shutting Down.`
+          ? `初始任务时出错。确保您的 API 密钥不是免费套餐，让您的任务目标更明确，或者修改您的目标，使其在我们模型的政策范围内运行。任务结束。`
+          : `初始任务时出错。重试，让您的任务目标更明确，或者修改你的目标，使其在我们模型的政策范围内运行。任务结束。`
       );
       this.shutdown();
       return;

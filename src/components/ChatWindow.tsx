@@ -90,7 +90,7 @@ const ChatWindow = ({ messages, children, className }: ChatWindowProps) => {
                 message={{
                   type: "system",
                   value:
-                    "> Create an agent by adding a name / goal, and hitting deploy!",
+                    "> 通过添加名称/目标并点击Deploy来创建任务！",
                 }}
               />
             </Expand>
@@ -99,7 +99,7 @@ const ChatWindow = ({ messages, children, className }: ChatWindowProps) => {
                 message={{
                   type: "system",
                   value:
-                    "📢 You can first provide your own OpenAI API key via the settings tab!",
+                    "📢 您可以首先通过设置选项卡提供您自己的OpenAI API密钥！",
                 }}
               />
             </Expand>
@@ -129,7 +129,7 @@ const MacWindowHeader = () => {
       .then((dataUrl) => {
         const link = document.createElement("a");
         link.href = dataUrl;
-        link.download = "agent-gpt-output.png";
+        link.download = "多变 Auto-GPT-output.png";
         link.click();
       })
       .catch(console.error);
@@ -163,7 +163,7 @@ const MacWindowHeader = () => {
           onClick={(): void => saveElementAsImage(messageListId)}
         >
           <FaSave size={12} />
-          <p className="font-mono">Save</p>
+          <p className="font-mono">保存</p>
         </div>
       </PopIn>
 
@@ -173,7 +173,7 @@ const MacWindowHeader = () => {
           onClick={(): void => copyElementText(messageListId)}
         >
           <FaClipboard size={12} />
-          <p className="font-mono">Copy</p>
+          <p className="font-mono">复制</p>
         </div>
       </PopIn>
     </div>
@@ -216,7 +216,7 @@ const ChatMessage = ({ message }: { message: Message }) => {
 
       {message.type == "thinking" && (
         <span className="italic text-zinc-400">
-          (Restart if this takes more than 30 seconds)
+          (时间超过30秒，请重新启动)
         </span>
       )}
 
@@ -236,7 +236,7 @@ const ChatMessage = ({ message }: { message: Message }) => {
       <div className="relative">
         {copied ? (
           <span className="absolute bottom-0 right-0 rounded-full border-2 border-white/30 bg-zinc-800 p-1 px-2 text-gray-300">
-            Copied!
+            复制成功！
           </span>
         ) : (
           <span
@@ -258,7 +258,7 @@ const DonationMessage = ({ url }: { url: string }) => {
   return (
     <div className="mx-2 my-1 flex flex-col gap-2 rounded-lg border-[2px] border-white/10 bg-blue-500/20 p-1 font-mono hover:border-[#1E88E5]/40 sm:mx-4 sm:flex-row sm:p-3 sm:text-center sm:text-base">
       <div className="max-w-none flex-grow">
-        💝️ Help support the advancement of AgentGPT. 💝
+        💝️ Help support the advancement of 多变 Auto-GPT. 💝
         <br />
         Please consider donating help fund our high infrastructure costs.
       </div>
@@ -290,11 +290,11 @@ const getMessageIcon = (message: Message) => {
 const getMessagePrefix = (message: Message) => {
   switch (message.type) {
     case "goal":
-      return "Embarking on a new goal:";
+      return "开始新的目标：";
     case "task":
-      return "Added task:";
+      return "添加子任务：";
     case "thinking":
-      return "Thinking...";
+      return "想法...";
     case "action":
       return message.info ? message.info : "Executing:";
   }

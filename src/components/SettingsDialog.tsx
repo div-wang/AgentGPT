@@ -33,15 +33,14 @@ export default function SettingsDialog({
 
   return (
     <Dialog
-      header="Settings ⚙"
+      header="设置 ⚙"
       isShown={show}
       close={handleClose}
-      footerButton={<Button onClick={handleSave}>Save</Button>}
+      footerButton={<Button onClick={handleSave}>保存</Button>}
     >
       <p>
-        Here you can add your OpenAI API key. This will require you to pay for
-        your own OpenAI usage but give you greater access to AgentGPT! You can
-        additionally select any model OpenAI offers.
+        您可以选择OpenAI提供的任何模型。
+        还可以添加你的OpenAI API密钥。（账号要是是付费的哦）
       </p>
       <div className="text-md relative flex-auto p-2 leading-relaxed">
         <Input
@@ -67,7 +66,7 @@ export default function SettingsDialog({
           value={key}
           onChange={(e) => setKey(e.target.value)}
         />
-        <strong className="mt-10">
+        {/* <strong className="mt-10">
           NOTE: To get a key, sign up for an OpenAI account and visit the
           following{" "}
           <a
@@ -77,7 +76,7 @@ export default function SettingsDialog({
             link.
           </a>{" "}
           This key is only used in the current browser session
-        </strong>
+        </strong> */}
       </div>
     </Dialog>
   );

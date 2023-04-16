@@ -65,7 +65,7 @@ const Drawer = ({
               className="flex-grow"
               icon={<BiPlus />}
               border
-              text="New Agent"
+              text="创建新任务"
               onClick={() => location.reload()}
             />
             <button
@@ -89,8 +89,7 @@ const Drawer = ({
 
             {userAgents.length === 0 && (
               <div>
-                Click the above button to restart. In the future, this will be a
-                list of your deployed agents!
+                任务列表在这里!
               </div>
             )}
           </ul>
@@ -110,11 +109,11 @@ const Drawer = ({
 
           <DrawerItem
             icon={<FaQuestionCircle />}
-            text="Help"
+            text="帮助"
             onClick={showHelp}
           />
-          <DrawerItem icon={<FaCog />} text="Settings" onClick={showSettings} />
-          <DrawerItem
+          <DrawerItem icon={<FaCog />} text="设置" onClick={showSettings} />
+          {/* <DrawerItem
             icon={<FaDiscord />}
             text="Discord"
             href="https://discord.gg/jdSBAnmdnY"
@@ -129,9 +128,9 @@ const Drawer = ({
           <DrawerItem
             icon={<FaGithub />}
             text="GitHub"
-            href="https://github.com/reworkd/AgentGPT"
+            href="https://github.com/reworkd/多变 Auto-GPT"
             target="_blank"
-          />
+          /> */}
         </div>
       </div>
     </>
