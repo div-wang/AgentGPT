@@ -51,6 +51,14 @@ const Drawer = ({
         <FaBars />
       </button>
       <div
+        onClick={toggleDrawer}
+        // id="drawer"
+        className={clsx(
+          showDrawer ? "translate-x-0" : "-translate-x-full",
+          "w-full md:hidden absolute h-screen top-0 left-0 bg-black/50 z-20"
+        )}
+      ></div>
+      <div
         id="drawer"
         className={clsx(
           showDrawer ? "translate-x-0" : "-translate-x-full",
@@ -68,12 +76,12 @@ const Drawer = ({
               text="创建新任务"
               onClick={() => location.reload()}
             />
-            <button
+            {/* <button
               className="z-40 rounded-md border-2 border-white/20 bg-zinc-900 p-2 text-white hover:bg-zinc-700 md:hidden"
               onClick={toggleDrawer}
             >
               <FaBars />
-            </button>
+            </button> */}
           </div>
           {/*{TODO: enable for crud}*/}
           <ul>
