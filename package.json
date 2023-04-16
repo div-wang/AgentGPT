@@ -1,9 +1,9 @@
 {
-  "name": "多变 Auto-GPT",
+  "name": "RedTom-Auto-GPT",
   "version": "0.1.0",
   "private": true,
   "engines": {
-    "node": ">=18.0.0"
+    "node": ">=16.0.0"
   },
   "scripts": {
     "build": "next build --no-lint",
