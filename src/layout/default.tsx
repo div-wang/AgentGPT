@@ -11,48 +11,27 @@ interface LayoutProps {
 
 const DefaultLayout = (props: LayoutProps) => {
   const description =
-    "Assemble, configure, and deploy autonomous AI Agents in your browser.";
+    "在浏览器中组装、配置和部署自主AI代理。";
   return (
     <div className="flex flex-col bg-gradient-to-b from-[#2B2B2B] to-[#1F1F1F]">
       <Head>
         <title>多变 Auto-GPT</title>
         <meta name="description" content={description} />
-        <meta name="twitter:site" content="@多变 Auto-GPT" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="多变 Auto-GPT 🤖" />
-        <meta name="twitter:description" content={description} />
-        <meta
-          name="twitter:image"
-          content="https://多变 Auto-GPT.reworkd.ai/banner.png"
-        />
-        <meta name="twitter:image:width" content="1280" />
-        <meta name="twitter:image:height" content="640" />
         <meta
           property="og:title"
-          content="多变 Auto-GPT: Autonomous AI in your browser 🤖"
+          content="多变 Auto-GPT: 浏览器中的自主人工智能 🤖"
         />
         <meta
           property="og:description"
-          content="Assemble, configure, and deploy autonomous AI Agents in your browser."
+          content={description}
         />
-        <meta property="og:url" content="https://多变 Auto-GPT.reworkd.ai/" />
+        <meta property="og:url" content="https://auto.redtom.com/" />
         <meta
           property="og:image"
-          content="https://多变 Auto-GPT.reworkd.ai/banner.png"
+          content="https://tiwen.redtom.com/static/imgs/index/logo.png"
         />
-        <meta property="og:image:width" content="1280" />
-        <meta property="og:image:height" content="640" />
         <meta property="og:type" content="website" />
-        <meta
-          name="google-site-verification"
-          content="sG4QDkC8g2oxKSopgJdIe2hQ_SaJDaEaBjwCXZNkNWA"
-        />
         <link rel="icon" href="/favicon.ico" />
-        <Script
-          src="https://plausible.io/js/script.js"
-          strategy="afterInteractive"
-          data-domain="多变 Auto-GPT.reworkd.ai"
-        />
       </Head>
       <DottedGridBackground className={clsx("min-h-screen", props.className)}>
         {props.children}
